@@ -7,10 +7,14 @@ var a=angular.module('readingList', [])
     this.books=books;
     this.genres=genres;
 })
-.directive('bookGenre', function(){
-    return{
-        restrict:'E',
-        templateUrl:'partials/book-genre.html'
+
+  .directive('bookGenre', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'partials/book-genre.html',
+      scope: {
+        genres: '='
+      }
     }
 })
 
@@ -24,8 +28,17 @@ var a=angular.module('readingList', [])
 .directive('reviewForm', function(){
    return{
        restrict:'E',
-       templateUrl:'partials/book-form.html',
-       replace:true
+       templateUrl:'partials/review-form.html',
+       replace:true,
+       controller: function(){
+           this.showForm=false;
+           this.book={genres:{}};
+       },
+       controllerAs:'reviewFormCtrl',
+       scope:{
+       books:'=',
+       genres:'='
+   }
    } 
 });
     
