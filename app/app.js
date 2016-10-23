@@ -33,6 +33,13 @@ var a=angular.module('readingList', [])
        controller: function(){
            this.showForm=false;
            this.book={genres:{}};
+           
+           this.addReview= function(form){
+           books.push(this.book);
+           this.book={genres:{}};
+            form.$setPristine();
+               
+           }
        },
        controllerAs:'reviewFormCtrl',
        scope:{
@@ -56,12 +63,12 @@ var genres = [ 'fable', 'fantasy', 'fiction', 'folklore', 'horror', 'humor', 'le
       rating: 4,
       genres: { 'non-fiction': true, fantasy: true }
     },{
-      title: 'HTML for Babies',
-      author: 'John C Vanden-Heuvel Sr',
-      isbn: '0615487661',
-      review: "It's never too early to be standards compliant! I taught my little one mark-up in under one hour!",
+      title: 'Harry Potter and the Cursed Child',
+      author: 'John, Jake, J.K Rowling',
+      isbn: '1338099132',
+      review: "Great book!",
       rating: 5,
-      genres: { fiction: true }
+      genres: { fiction: true, fantasy: true }
     },{
       title: 'A is for Array',
       author: 'Brandon J Hansen',
