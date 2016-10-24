@@ -70,12 +70,12 @@ var genres = [ 'fable', 'fantasy', 'fiction', 'folklore', 'horror', 'humor', 'le
       rating: 5,
       genres: { fiction: true, fantasy: true }
     },{
-      title: 'A is for Array',
+      title: 'Magnus Chase',
       author: 'Brandon J Hansen',
-      isbn: '1489522212',
-      review: 'A is for Array is the ABC book for future programmers. Filled with fun illustrations and simple real-world examples, my children loved seeing my world intertwined with theirs!',
+      isbn: '1423160924',
+      review: 'First of all, let \'s start with the cool part - Magnus Chase is a cousin of Annabeth. Yes, Annabeth from the Percy Jackson books. Small world. And probably something that will play a part in the later books.',
       rating: 4,
-      genres: { fiction: true }
+      genres: { fantasy: true }
     },{
       title: 'The Dragon Reborn',
       author: 'Robert Jordan',
